@@ -1,0 +1,15 @@
+def verificar_aprovacao (faltas, av1, av2):
+    media = (av1 + av2)/2
+    if faltas > 25:
+        return "Reprovado"
+    elif faltas <= 25 and media >= 7:
+        return "Aprovado"
+    else:
+        return "Recuperação"
+
+faltas = int(input("Digite o número de faltas do aluno: "))
+av1 = float(input("Digite a nota da primeira avaliação: "))
+av2 = float(input("Digite a nota da segunda avaliação: "))
+
+resultado = verificar_aprovacao(faltas,av1,av2)
+print ("Resultado: ", resultado)
